@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(cors());
 
 
-app.get('/', (req, res) => { res.send(database.users) })   // displays the database array
+app.get('/', (req, res) => { res.send(`It is working!`) })   // displays the database array
 
 // this is the sign in route. it checks to see if the email and password match what is in our 'database'. and will login approriately.
 app.post('/signin', (req, res) => { signin.handleSignIn(req, res, db, bcrypt) })
